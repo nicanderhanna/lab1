@@ -11,9 +11,12 @@ public class Volvo240 extends Cars{
         enginePower = 100;
         modelName = "Volvo240";
         stopEngine();
+        posY = 0;
+        posX = 0;
+        direction = "North";
     }
 
-    public void startEngine(){
+    private void startEngine(){
 	    currentSpeed = 0.1;
     }
     
