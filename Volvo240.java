@@ -66,6 +66,6 @@ public class Volvo240{
         decrementSpeed(amount);
     }
 
-    // hej ehj
+    // hej ehj hoppla
 
 }
