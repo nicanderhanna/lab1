@@ -1,0 +1,57 @@
+import org.junit.Before;
+import org.junit.Test;
+
+import java.awt.*;
+
+import static org.junit.Assert.assertTrue;
+
+public class Tester {
+
+    private Volvo240 volvo240;
+    private Saab95 saab95;
+
+    @Before
+    public void init() {
+        volvo240 = new Volvo240();
+        saab95 = new Saab95();
+    }
+
+    @Test
+    public void testNrDoors() {
+        assertTrue(volvo240.getNrDoors() == 4);
+        assertTrue(saab95.getNrDoors() == 2);
+    }
+
+    @Test
+    public void testEnginePower() {
+        assertTrue(volvo240.getEnginePower() == 100);
+        assertTrue(saab95.getEnginePower() == 125);
+    }
+
+    @Test
+    public void testCurrentSpeed() {
+        assertTrue(saab95.getCurrentSpeed() == 0);
+        saab95.startEngine();
+        assertTrue(saab95.getCurrentSpeed() == 0.1);
+
+        assertTrue(volvo240.getCurrentSpeed() == 0);
+        volvo240.startEngine();
+        assertTrue(volvo240.getCurrentSpeed() == 0.1);
+
+    }
+    @Test
+    public void testColor() {
+        assertTrue(volvo240.getColor() == Color.black);
+        assertTrue(saab95.getColor() == Color.red);
+    }
+
+    @Test
+    public void testGas() {
+        assertTrue(volvo240.getCurrentSpeed() == 0.1);
+        volvo240.gas(0.5);
+        assertTrue(volvo240.getCurrentSpeed() == 0.6);
+        volvo240.gas(5);
+        assertTrue(volvo240.getCurrentSpeed() == 0.6);
+
+    }
+}
