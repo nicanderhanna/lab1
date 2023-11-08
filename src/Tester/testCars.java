@@ -36,6 +36,8 @@ public class testCars {
     @Test
     public void testColor() {
         assertTrue(saab95.getColor() == Color.red);
+        saab95.setColor(Color.black);
+        assertTrue(saab95.getColor() == Color.black);
     }
 
 
