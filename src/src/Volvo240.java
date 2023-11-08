@@ -16,7 +16,7 @@ public class Volvo240 extends Cars{
         direction = "North";
     }
 
-    private void startEngine(){
+    public void startEngine(){
 
         currentSpeed = 0.1;
     }
