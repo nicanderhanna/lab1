@@ -13,6 +13,18 @@ public class testVolvo240 {
         volvo240 = new Volvo240();
     }
 
+    @Test
+    public void testStartEngine(){
+        volvo240.startEngine();
+        assertTrue(volvo240.getCurrentSpeed()==0.1);
+    }
+
+    @Test
+    public void testSpeedFactor(){
+        double speedfactor = volvo240.speedFactor();
+        assertTrue(speedfactor==1.25);
+    }
+
 /*    @Test
     public void testGas() {
         volvo240.stopEngine();
