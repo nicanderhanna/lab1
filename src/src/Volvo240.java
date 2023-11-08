@@ -27,7 +27,7 @@ public class Volvo240 extends Cars{
 
     }
 
-    public void incrementSpeed(double amount){
+/*    public void incrementSpeed(double amount){
 
 
             currentSpeed = Math.min(getCurrentSpeed() + speedFactor() * amount,enginePower);
@@ -46,12 +46,12 @@ public class Volvo240 extends Cars{
             currentSpeed = 0;
 
         }
-    }
+    }*/
 
     // TODO göra tester för uppgift 4 men det ska nog funka.
 
     // TODO fix this method according to lab pm
-    public void gas(double amount){
+/*    public void gas(double amount){
 
         if (amount > 1 || amount < 0) {
             System.out.println("Please choose a value between 0 and 1");
@@ -59,10 +59,10 @@ public class Volvo240 extends Cars{
         else {
             incrementSpeed(amount);
         }
-    }
+    }*/
 
     // TODO fix this method according to lab pm
-    public void brake(double amount){
+/*    public void brake(double amount){
 
         if (amount > 1 || amount < 0) {
             System.out.println("Please choose a value between 0 and 1");
@@ -70,8 +70,6 @@ public class Volvo240 extends Cars{
         else {
             decrementSpeed(amount);
         }
-    }
-
-    // hej ehj hoppla
+    }*/
 
 }

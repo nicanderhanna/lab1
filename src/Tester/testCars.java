@@ -38,6 +38,7 @@ public class testCars {
         assertTrue(saab95.getColor() == Color.red);
     }
 
+
     @Test
     public void testMove(){
         assertTrue(saab95.posX == 0);
@@ -59,6 +60,31 @@ public class testCars {
         assertTrue(saab95.direction == "North");
         saab95.turnRight();
         assertTrue(saab95.direction == "East");
+
+    }
+
+    @Test
+    public void testGas() {
+        //saab95.stopEngine();
+        assertTrue(saab95.getCurrentSpeed() == 0);
+        saab95.startEngine();
+        assertTrue(saab95.getCurrentSpeed() == 0.1);
+        saab95.gas(0.5);
+        assertTrue(saab95.getCurrentSpeed() == 0.725);
+        saab95.gas(5);
+        assertTrue(saab95.getCurrentSpeed() == 0.725);
+
+    }
+
+    @Test
+    public void testBrake(){
+        saab95.startEngine();
+        saab95.gas(0.5);
+        saab95.brake(0.1);
+        assertTrue(saab95.getCurrentSpeed() == 0.6);
+        saab95.brake(1.0);
+        assertTrue(saab95.getCurrentSpeed() == 0);
+
 
     }
 }

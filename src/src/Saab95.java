@@ -35,7 +35,7 @@ public class Saab95 extends Cars{
         return enginePower * 0.01 * turbo;
     }
 
-    public void incrementSpeed(double amount){
+/*    public void incrementSpeed(double amount){
 
         currentSpeed = Math.min(getCurrentSpeed() + speedFactor() * amount,enginePower);
         if (currentSpeed > enginePower) {
@@ -53,11 +53,11 @@ public class Saab95 extends Cars{
             currentSpeed = 0;
 
         }
-    }
+    }*/
 
     // TODO göra tester för uppgift 4 men det ska nog funka.
 
-    public void gas(double amount){
+/*    public void gas(double amount){
 
         if (amount > 1 || amount < 0) {
             System.out.println("Please choose a value between 0 and 1");
@@ -65,9 +65,9 @@ public class Saab95 extends Cars{
         else {
             incrementSpeed(amount);
         }
-    }
+    }*/
 
-    public void brake(double amount){
+/*    public void brake(double amount){
 
         if (amount > 1 || amount < 0) {
             System.out.println("Please choose a value between 0 and 1");
@@ -75,6 +75,6 @@ public class Saab95 extends Cars{
         else {
             decrementSpeed(amount);
         }
-    }
+    }*/
 
 }

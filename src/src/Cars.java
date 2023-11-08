@@ -1,6 +1,6 @@
 import java.awt.*;
 
-public class Cars implements Movable {
+public abstract class Cars implements Movable {
 
 
 
@@ -13,6 +13,8 @@ public class Cars implements Movable {
     public double posY;   // Position Y of the car
                            ; //
     public String direction; // Direction of the car
+
+    public abstract double speedFactor();
 
 
 
@@ -91,6 +93,47 @@ public class Cars implements Movable {
             case "West":
                 direction = "North";
                 break;
+        }
+    }
+
+
+    public void incrementSpeed(double amount){
+
+        currentSpeed = Math.min(getCurrentSpeed() + speedFactor() * amount,enginePower);
+        if (currentSpeed > enginePower) {
+
+            currentSpeed = enginePower;
+
+        }
+    }
+
+    public void decrementSpeed(double amount){
+
+        currentSpeed = Math.max(getCurrentSpeed() - speedFactor() * amount,0);
+        if (currentSpeed < 0) {
+
+            currentSpeed = 0;
+
+        }
+    }
+
+    public void gas(double amount){
+
+        if (amount > 1 || amount < 0) {
+            System.out.println("Please choose a value between 0 and 1");
+        }
+        else {
+            incrementSpeed(amount);
+        }
+    }
+
+    public void brake(double amount){
+
+        if (amount > 1 || amount < 0) {
+            System.out.println("Please choose a value between 0 and 1");
+        }
+        else {
+            decrementSpeed(amount);
         }
     }
 }
