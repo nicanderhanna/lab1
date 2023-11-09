@@ -11,7 +11,7 @@ public abstract class Cars implements Movable {
     public String modelName; // The car model name
     public double posX;   // Positiion X of the car
     public double posY;   // Position Y of the car
-                           ; //
+                            //
     public String direction; // Direction of the car
 
     public abstract double speedFactor();
@@ -22,26 +22,26 @@ public abstract class Cars implements Movable {
         color = clr;
     }
 
-    public int getNrDoors(){
+    protected int getNrDoors(){
         return nrDoors;
     }
-    public double getEnginePower(){
+    protected double getEnginePower(){
         return enginePower;
     }
 
-    public double getCurrentSpeed(){
+    protected double getCurrentSpeed(){
         return currentSpeed;
     }
 
-    public Color getColor(){
+    protected Color getColor(){
         return color;
     }
 
-    public void stopEngine(){
+    protected void stopEngine(){
         currentSpeed = 0;
     }
 
-    @Override
+
     public void move() {
         switch (direction) {
             case "North":
@@ -59,7 +59,6 @@ public abstract class Cars implements Movable {
         }
     }
 
-    @Override
     public void turnLeft() {
          switch(direction){
              case "North":
@@ -78,7 +77,7 @@ public abstract class Cars implements Movable {
          }
     }
 
-    @Override
+
     public void turnRight() {
         switch(direction) {
             case "North":
@@ -97,7 +96,7 @@ public abstract class Cars implements Movable {
     }
 
 
-    public void incrementSpeed(double amount){
+    private void incrementSpeed(double amount){
 
         currentSpeed = Math.min(getCurrentSpeed() + speedFactor() * amount,enginePower);
         if (currentSpeed > enginePower) {
@@ -107,7 +106,7 @@ public abstract class Cars implements Movable {
         }
     }
 
-    public void decrementSpeed(double amount){
+    private void decrementSpeed(double amount){
 
         currentSpeed = Math.max(getCurrentSpeed() - speedFactor() * amount,0);
         if (currentSpeed < 0) {
