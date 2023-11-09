@@ -6,23 +6,23 @@ public class Saab95 extends Cars{
 
     
     public Saab95(){
-        nrDoors = 2;
-        color = Color.red;
-        enginePower = 125;
+        SetnrDoors(4);
+        setColor(Color.red);
+        setenginePower(125);
 	    turboOn = false;
-        modelName = "Saab95";
+        setModelName("Saab95");
         stopEngine();
-        posX = 0;
-        posY = 0;
+        setposX(0);
+        setposY(0);
         direction = "North";
     }
 
     protected void startEngine(){
-	    currentSpeed = 0.1;
+	    setenginePower(0.1);
     }
 
     protected void setTurboOn(){
-	    turboOn = true;
+        turboOn = true;
     }
 
     protected void setTurboOff(){
@@ -32,7 +32,7 @@ public class Saab95 extends Cars{
     public double speedFactor(){
         double turbo = 1;
         if(turboOn) turbo = 1.3;
-        return enginePower * 0.01 * turbo;
+        return geteningePower() * 0.01 * turbo;
     }
 
 }

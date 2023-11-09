@@ -4,14 +4,48 @@ public abstract class Cars implements Movable {
 
 
 
-    protected int nrDoors; // Number of doors on the car
-    protected double enginePower; // Engine power of the car
-    protected double currentSpeed; // The current speed of the car
-    protected Color color; // Color of the car
-    protected String modelName; // The car model name
-    protected double posX;   // Position X of the car
-    protected double posY;   // Position Y of the car
+    private int nrDoors; // Number of doors on the car
+    private double enginePower; // Engine power of the car
+    private double currentSpeed; // The current speed of the car
+    private Color color; // Color of the car
+    private String modelName; // The car model name
+    private double posX;   // Position X of the car
+    private double posY;   // Position Y of the car
                             //
+    protected int GetnrDoors() {
+        return nrDoors;
+    }
+    protected void SetnrDoors(int nrDoors) {
+        this.nrDoors = nrDoors;
+    }
+
+    protected void setModelName(String modelName) {
+        this.modelName = modelName;
+    }
+
+    protected double geteningePower() {
+        return enginePower;
+    }
+    protected void setenginePower(double enginePower) {
+        this.enginePower = enginePower;
+    }
+
+    protected void setposX(double posX) {
+        this.posX = posX;
+    }
+
+    protected void setposY(double posY){
+        this.posY = posY;
+    }
+
+    protected double GetcurrentSpeed() {
+        return currentSpeed;
+    }
+    protected void SetcurrentSpeed(double currentSpeed) {
+        this.currentSpeed = currentSpeed;
+    }
+
+
     protected String direction; // Direction of the car
 
     public abstract double speedFactor();
@@ -116,7 +150,7 @@ public abstract class Cars implements Movable {
         }
     }
 
-    public void gas(double amount){
+    protected void gas(double amount){
 
         if (amount > 1 || amount < 0) {
             System.out.println("Please choose a value between 0 and 1");
@@ -126,7 +160,7 @@ public abstract class Cars implements Movable {
         }
     }
 
-    public void brake(double amount){
+    protected void brake(double amount){
 
         if (amount > 1 || amount < 0) {
             System.out.println("Please choose a value between 0 and 1");

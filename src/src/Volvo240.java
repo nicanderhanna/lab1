@@ -6,24 +6,24 @@ public class Volvo240 extends Cars {
 
 
     public Volvo240() {
-        nrDoors = 4;
-        color = Color.black;
-        enginePower = 100;
-        modelName = "Volvo240";
+        SetnrDoors(2);
+        setColor(Color.black);
+        setenginePower(100);
+        setModelName("Volvo240");
         stopEngine();
-        posY = 0;
-        posX = 0;
+        setposY(0);
+        setposX(0);
         direction = "North";
     }
 
     protected void startEngine() {
 
-        currentSpeed = 0.1;
+        SetcurrentSpeed(0.1);
     }
 
     public double speedFactor() {
 
-        return enginePower * 0.01 * trimFactor;
+        return geteningePower() * 0.01 * trimFactor;
 
     }
 }
