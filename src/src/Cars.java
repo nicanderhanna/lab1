@@ -15,7 +15,7 @@ public abstract class Cars implements Movable {
     protected int GetnrDoors() {
         return nrDoors;
     }
-    protected void SetnrDoors(int nrDoors) {
+    protected void setNrDoors(int nrDoors) {
         this.nrDoors = nrDoors;
     }
 
@@ -26,7 +26,7 @@ public abstract class Cars implements Movable {
     protected double geteningePower() {
         return enginePower;
     }
-    protected void setenginePower(double enginePower) {
+    protected void setEnginePower(double enginePower) {
         this.enginePower = enginePower;
     }
 
@@ -52,7 +52,7 @@ public abstract class Cars implements Movable {
 
 
 
-    public void setColor(Color clr){
+    protected void setColor(Color clr){
         color = clr;
     }
 
@@ -97,21 +97,21 @@ public abstract class Cars implements Movable {
     }
 
     public void turnLeft() {
-         switch(direction){
-             case "North":
-                 direction = "West";
-                 break;
-             case "West":
-                 direction = "South";
-                 break;
-             case "South":
-                 direction = "East";
-                 break;
-             case "East":
-                 direction =  "North";
-                 break;
+        switch(direction){
+            case "North":
+                direction = "West";
+                break;
+            case "West":
+                direction = "South";
+                break;
+            case "South":
+                direction = "East";
+                break;
+            case "East":
+                direction =  "North";
+                break;
 
-         }
+        }
     }
 
 
@@ -173,4 +173,3 @@ public abstract class Cars implements Movable {
         }
     }
 }
-
