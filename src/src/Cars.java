@@ -11,7 +11,7 @@ public abstract class Cars implements Movable {
     private String modelName; // The car model name
     private double posX;   // Position X of the car
     private double posY;   // Position Y of the car
-                            //
+    //
     protected int GetnrDoors() {
         return nrDoors;
     }
@@ -56,9 +56,6 @@ public abstract class Cars implements Movable {
         color = clr;
     }
 
-    protected int getNrDoors(){
-        return nrDoors;
-    }
     protected double getEnginePower(){
         return enginePower;
     }
