@@ -17,7 +17,7 @@ public class testCars {
 
     @Test
     public void testNrDoors() {
-        assertTrue(saab95.getNrDoors() == 2);
+        assertTrue(saab95.GetnrDoors() == 2);
     }
 
 
@@ -90,4 +90,3 @@ public class testCars {
 
     }
 }
-
