@@ -25,15 +25,4 @@ public class testVolvo240 {
         assertTrue(speedfactor==1.25);
     }
 
-/*    @Test
-    public void testGas() {
-        volvo240.stopEngine();
-        assertTrue(volvo240.getCurrentSpeed() == 0);
-        volvo240.startEngine();
-        assertTrue(volvo240.getCurrentSpeed() == 0.1);
-        volvo240.gas(0.5);
-        assertTrue(volvo240.getCurrentSpeed() == 0.725);
-        volvo240.gas(5);
-        assertTrue(volvo240.getCurrentSpeed() == 0.725);
-    }*/
 }
