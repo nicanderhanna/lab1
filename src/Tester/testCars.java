@@ -28,9 +28,9 @@ public class testCars {
 
     @Test
     public void testCurrentSpeed() {
-        assertTrue(saab95.getCurrentSpeed() == 0);
+        assertTrue(saab95.GetcurrentSpeed() == 0);
         saab95.startEngine();
-        assertTrue(saab95.getCurrentSpeed() == 0.1);
+        assertTrue(saab95.GetcurrentSpeed() == 0.1);
     }
 
     @Test
@@ -43,11 +43,11 @@ public class testCars {
 
     @Test
     public void testMove(){
-        assertTrue(saab95.posX == 0);
-        assertTrue(saab95.posY == 0);
+        assertTrue(saab95.getPosX() == 0);
+        assertTrue(saab95.getPosY() == 0);
         saab95.startEngine();
         saab95.move();
-        assertTrue(saab95.posY == 0.1);
+        assertTrue(saab95.getPosY() == 0.1);
     }
 
     @Test

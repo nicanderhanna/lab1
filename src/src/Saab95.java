@@ -6,7 +6,7 @@ public class Saab95 extends Cars{
 
     
     public Saab95(){
-        SetnrDoors(4);
+        SetnrDoors(2);
         setColor(Color.red);
         setenginePower(125);
 	    turboOn = false;
@@ -17,8 +17,7 @@ public class Saab95 extends Cars{
         direction = "North";
     }
 
-    protected void startEngine(){
-	    setenginePower(0.1);
+    protected void startEngine(){SetcurrentSpeed(0.1);
     }
 
     protected void setTurboOn(){

@@ -9,8 +9,8 @@ public abstract class Cars implements Movable {
     private double currentSpeed; // The current speed of the car
     private Color color; // Color of the car
     private String modelName; // The car model name
-    private double posX;   // Position X of the car
-    private double posY;   // Position Y of the car
+    public double posX;   // Position X of the car
+    public double posY;   // Position Y of the car
                             //
     protected int GetnrDoors() {
         return nrDoors;
@@ -75,6 +75,12 @@ public abstract class Cars implements Movable {
         currentSpeed = 0;
     }
 
+    protected double getPosX(){
+        return posX;
+    }
+    protected double getPosY(){
+        return posY;
+    }
 
     public void move() {
         switch (direction) {
