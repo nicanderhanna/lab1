@@ -3,3 +3,6 @@ Borde vi lägga till att om speed inte är 0 så kan man svänga, annars inte?
 
 Set funktioner bör vara public då de är till för användaren?
 Vissa om inte alla Get funktioner kan vara public då de också är till för användaren, det ändrar ju inget
+
+Just nu fungerar inte Scania testet eftersom posX, posY och currentspeed alla är private i cars. Vi behöver antingen ändra på det
+eller komma upp med en alternativ lösning till hur vi ska få move att inte fungera för Scania då flaket är uppe. 
