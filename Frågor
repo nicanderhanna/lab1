@@ -1,2 +1,2 @@
-Kvar att göra:
-Private, Public, Protected.
+Just nu kan man gasa lastbilen trots att den inte får använda move on flaket är uppe 
+Borde vi lägga till att om speed inte är 0 så kan man svänga, annars inte? 
