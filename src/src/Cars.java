@@ -1,7 +1,7 @@
+
 import java.awt.*;
 
 public abstract class Cars implements Movable {
-
 
 
     private int nrDoors; // Number of doors on the car
@@ -9,9 +9,25 @@ public abstract class Cars implements Movable {
     private double currentSpeed; // The current speed of the car
     private Color color; // Color of the car
     private String modelName; // The car model name
-    private double posX;   // Position X of the car
-    private double posY;   // Position Y of the car
+    private double posX = 0;   // Position X of the car
+    private double posY = 0;   // Position Y of the car
     //
+
+    //private String direction = "North";  // Direction of the car
+    protected String direction = "North";  // Direction of the car
+
+    public abstract double speedFactor();
+
+
+
+    public Cars(int nrDoors, double enginePower, Color color, String modelName){
+        this.nrDoors = nrDoors;
+        this.enginePower = enginePower;
+        this.color = color;
+        this.modelName = modelName;
+        stopEngine();
+    }
+
     protected int GetnrDoors() {
         return nrDoors;
     }
@@ -44,12 +60,6 @@ public abstract class Cars implements Movable {
     protected void SetcurrentSpeed(double currentSpeed) {
         this.currentSpeed = currentSpeed;
     }
-
-
-    protected String direction; // Direction of the car
-
-    public abstract double speedFactor();
-
 
 
     protected void setColor(Color clr){

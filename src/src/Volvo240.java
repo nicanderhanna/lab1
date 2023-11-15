@@ -1,3 +1,6 @@
+
+//import src.Cars;
+
 import java.awt.*;
 
 public class Volvo240 extends Cars {
@@ -6,14 +9,7 @@ public class Volvo240 extends Cars {
 
 
     public Volvo240() {
-        setNrDoors(4);
-        setColor(Color.black);
-        setEnginePower(100);
-        setModelName("Volvo240");
-        stopEngine();
-        setposY(0);
-        setposX(0);
-        direction = "North";
+        super(4, 100, Color.black, "src.Volvo240");
     }
 
     protected void startEngine() {
