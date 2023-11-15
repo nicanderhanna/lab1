@@ -6,3 +6,9 @@ Vissa om inte alla Get funktioner kan vara public då de också är till för an
 
 Just nu fungerar inte Scania testet eftersom posX, posY och currentspeed alla är private i cars. Vi behöver antingen ändra på det
 eller komma upp med en alternativ lösning till hur vi ska få move att inte fungera för Scania då flaket är uppe. 
+
+
+hanna har:
+- gjorde direction attributet till protected för annars funkar ej move i scania. 
+- vi måste göra ett nytt repo till lab 2
+- 
